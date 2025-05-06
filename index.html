@@ -1,1 +1,66 @@
-<h1>this is my file <\h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boxy World</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://github.com/mrdoob/three.js/blob/r112/build/three.module.js"></script>
+
+  <style>
+
+    body {
+      position: relative;
+      min-width: 100vw;
+      min-height: 100vh;
+      font-size: 1.15rem;
+    }
+  
+    .disc {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      cursor: default;
+    }
+
+    #target {
+      filter: blur(5px);
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <div id="target"></div>
+  <div class="disc">
+    hello guys, this is a demo of my skills in 3D development and Three.js
+    <br>some of the most important topics of 3D development are implemented in this little demo
+    <br>including Shader Programing, 3D rendering and ThreeJS basic principles.
+
+    <i>
+      <br><br>
+      Controls:
+      <b>W:</b> Forward
+      <b>S:</b> Backward
+      <b>D:</b> Right
+      <b>A:</b> Left
+      <b>Space:</b> Jump
+    </i>
+
+    <h4>Click To Start</h4>
+  </div>
+  <script src="./src/main.js" type="module">
+  </script>
+
+  <script>
+    
+    document.body.onclick = () => {
+      document.getElementById("target").style.filter = "blur(0px)"
+      document.querySelector(".disc").style.display = "none"
+      document.getElementById("target").click()
+    }
+  </script>
+</body>
+</html>
